@@ -11,7 +11,7 @@
 
 - name: systemd setup
   include_role:
-    name: comman
+    name: common
     tasks_from: systemd-setup
 
 
