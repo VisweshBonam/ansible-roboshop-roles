@@ -2,17 +2,17 @@
 - name: app setup
   include_role:
     name: common
-    tasks_from: app-setup
+    tasks_from: app-setup.yaml
 
 - name: nodejs setup
   include_role:
     name: common
-    tasks_from: nodejs-setup
+    tasks_from: nodejs-setup.yaml
 
 - name: systemd setup
   include_role:
     name: common
-    tasks_from: systemd-setup
+    tasks_from: systemd-setup.yaml
 
 
 
