@@ -2,4 +2,4 @@ CATALOGUE_HOST: catalogue.liveyourlife.site
 USER_HOST: user.liveyourlife.site
 CART_HOST: cart.liveyourlife.site
 SHIPPING_HOST: shipping.liveyourlife.site
-PAYMENT_HOST: shipping.liveyourlife.site
+PAYMENT_HOST: payment.liveyourlife.site
