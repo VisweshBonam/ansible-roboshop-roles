@@ -1,0 +1,6 @@
+- name: configure redis component
+  hosts: redis
+  become: yes
+  roles:
+  - redis
+  
