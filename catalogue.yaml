@@ -1,1 +1,5 @@
-- name: configure 
+- name: configure catalogue component
+  hosts: catalogue
+  become: yes
+  roles:
+  - catalogue
