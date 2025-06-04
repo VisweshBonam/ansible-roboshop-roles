@@ -1,4 +1,4 @@
-- name: configure rabbit-mq server
+- name: configure rabbitmq server
   host: rabbitmq
   become: yes
   roles:
