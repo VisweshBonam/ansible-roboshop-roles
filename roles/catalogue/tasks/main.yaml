@@ -37,7 +37,7 @@
     path: /app
 
 - name: copying catalogue user to source directory
-  community.builtin.copy:
+  ansible.builtin.copy:
     src: catalogue.service
     dest: /etc/systemd/system/catalogue.service
 
@@ -50,4 +50,4 @@
     name: catalogue
     state: started
     enabled: yes
-    
+
