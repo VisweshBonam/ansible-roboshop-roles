@@ -29,7 +29,7 @@
     msg: "{{ catalogue_output }}"
 
 - name: laoding products
-  ansible.builtin.shell: mongo --host mongodb.liveyourlife.site < /app/db/master-data.js
+  ansible.builtin.shell: mongosh --host mongodb.liveyourlife.site < /app/db/master-data.js
   when: catalogue_output.stdout | int < 0
 
   
