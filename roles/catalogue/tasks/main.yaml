@@ -67,3 +67,8 @@
   ansible.builtin.command: mongosh --host mongodb.liveyourlife.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
+- name: print output value
+  tags:
+  - import
+  ansible.builtin.debug:
+    msg: "{{ catalogue_output }}"
