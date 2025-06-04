@@ -64,6 +64,8 @@
     state: present
 
 - name: check whether data is loaded or not
+  tags:
+  - import
   ansible.builtin.command: mongosh --host mongodb.liveyourlife.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
