@@ -51,3 +51,19 @@
     state: started
     enabled: yes
 
+# Loading data into catalogue from mongodb
+
+- name: copying mongo repo to source directory
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
+- name: install mongodb client
+  ansible.builtin.dnf:
+    name: mongodb-mongosh
+    state: present
+
+- name: check whether data is loaded or not
+  ansible.builtin.command: mongosh --host mongodb.liveyourlife.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  register: catalogue_output
+
