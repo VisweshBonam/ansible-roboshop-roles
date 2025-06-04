@@ -17,7 +17,7 @@
     chdir: /app
 
 - name: renaming jar file
-  ansible.builtin.command: mv /target/shipping-1.0.jar shipping.jar
+  ansible.builtin.command: mv target/shipping-1.0.jar shipping.jar
   args:
     chdir: /app
 
@@ -53,4 +53,3 @@
   ansible.builtin.service:
     name: shipping
     state: restarted
-    
