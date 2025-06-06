@@ -6,3 +6,13 @@
   - name: check whether user is created or not
     ansible.builtin.command: id roboshop
     register: user_output
+    ignore_errors: true
+
+  - name: create user
+    ansible.builtin.command: useradd roboshop
+    when: user_output.rc != 0
+
+  - name: print if user exsist
+    ansible.builtin.debug:
+      msg: "{{ user already exsists }}"
+    when: user_output.rc == 0
