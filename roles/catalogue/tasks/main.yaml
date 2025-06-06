@@ -39,7 +39,7 @@
 
 - name: deployment setup
   tags:
-    - deployment
+    - deployment-setup
   include_role:
     name: common
     tasks_from: deployment-setup
