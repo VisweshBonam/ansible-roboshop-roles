@@ -10,6 +10,8 @@
 
 # Loading data into catalogue from mongodb
 - name: copying mongo repo to source directory
+  tags:
+  - import
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
