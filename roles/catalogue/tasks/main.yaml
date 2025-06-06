@@ -22,10 +22,12 @@
 - name: check whether data is loaded or not
   ansible.builtin.command: mongosh --host mongodb.liveyourlife.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
+  ignore_errors: true
 
 - name: print output value
   ansible.builtin.debug:
     msg: "{{ catalogue_output }}"
+  ignore_errors: true
 
 - name: import data
   ansible.builtin.shell: mongosh --host mongodb.liveyourlife.site < /app/db/master-data.js
