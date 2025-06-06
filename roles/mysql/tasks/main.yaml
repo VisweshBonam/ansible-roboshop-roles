@@ -10,6 +10,5 @@
     enabled: yes
 
 - name: setup root password
-  vars_files:
-  - vault/mysql.yaml
+  
   ansible.builtin.command: mysql_secure_installation --set-root-pass "{{ MYSQL_ROOT_PASSWORD }}""
