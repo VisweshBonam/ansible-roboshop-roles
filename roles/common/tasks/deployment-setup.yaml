@@ -1,7 +1,7 @@
 - name: stop the service
   ansible.builtin.service:
     name: "{{ component }}"
-    state: stop
+    state: stopped
 
 - name: remove /app directory
   ansible.builtin.file:
