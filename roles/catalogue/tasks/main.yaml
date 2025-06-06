@@ -42,7 +42,7 @@
 
 - name: deployment setup
   tags:
-    - deployment-setup
+  - deployment
   include_role:
     name: common
     tasks_from: deployment-setup
