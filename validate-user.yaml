@@ -14,5 +14,5 @@
 
   - name: print if user exsist
     ansible.builtin.debug:
-      msg: "{{ user already exsists }}"
+      msg: "user already exsists"
     when: user_output.rc = 0
