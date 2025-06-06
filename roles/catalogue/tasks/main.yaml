@@ -41,8 +41,8 @@
     tasks_from: systemd-setup
 
 - name: deployment setup
-  # tags:
-  # - deployment
+  tags:
+  - deployment
   include_role:
     name: common
     tasks_from: deployment-setup
