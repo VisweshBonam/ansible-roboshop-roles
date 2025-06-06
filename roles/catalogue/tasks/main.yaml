@@ -8,7 +8,7 @@
     name: common
     tasks_from: nodejs-setup
 
-Loading data into catalogue from mongodb
+# Loading data into catalogue from mongodb
 - name: copying mongo repo to source directory
   ansible.builtin.copy:
     src: mongo.repo
