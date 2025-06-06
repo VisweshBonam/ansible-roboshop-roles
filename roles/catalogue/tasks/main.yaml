@@ -10,34 +10,24 @@
 
 # Loading data into catalogue from mongodb
 - name: copying mongo repo to source directory
-  tags:
-  - import
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
 - name: install mongodb client
-  tags:
-  - import
   ansible.builtin.dnf:
     name: mongodb-mongosh
     state: present
 
 - name: check whether data is loaded or not
-  tags:
-  - import
   ansible.builtin.command: mongosh --host mongodb.liveyourlife.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
 - name: print output value
-  tags:
-  - import
   ansible.builtin.debug:
     msg: "{{ catalogue_output }}"
 
 - name: import data
-  tags:
-  - import
   ansible.builtin.shell: mongosh --host mongodb.liveyourlife.site </app/db/master-data.js
   when: catalogue_output.stdout | int < 0
 
