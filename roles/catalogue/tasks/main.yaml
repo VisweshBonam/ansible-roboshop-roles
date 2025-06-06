@@ -36,3 +36,8 @@
   include_role:
     name: common
     tasks_from: systemd-setup
+
+- name: deployement setup
+  include_role:
+    name: deployement
+    tasks_from: deployement-setup
