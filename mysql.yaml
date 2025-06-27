@@ -1,5 +1,7 @@
 - name: configure mysql component
-  hosts: mysql
+  # hosts: mysql
+  hosts: localhost
+  connection : local
   become: yes
   roles:
   - mysql
