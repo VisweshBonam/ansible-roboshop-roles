@@ -4,4 +4,4 @@
   connection : local
   become: yes
   roles: # this will automatically load a folder called roles in current working directory.
-  - mongod
+  - mongodb
