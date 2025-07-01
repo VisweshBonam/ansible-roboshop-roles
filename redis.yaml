@@ -1,7 +1,7 @@
 - name: configure redis component
-  # hosts: redis
-  hosts: localhost
-  connection: local
+  hosts: redis
+  # hosts: localhost
+  # connection: local
   become: yes
   roles:
   - redis
